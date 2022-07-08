@@ -1,0 +1,218 @@
+@import "../../styles/constants";
+
+.profile-window {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+
+  .left-panel {
+    display: flex;
+    flex-direction: column;
+    width: 64px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background: #FBFBFB;
+    border-right: 1px solid #EAEAEA;
+
+    .button-back {
+      width: 47px;
+      height: 67px;
+      background: url("../../../static/icons/sign-bn-back.svg") no-repeat center center;
+
+      &:hover {
+        background: url("../../../static/icons/sign-bn-back-hover.svg") no-repeat center center;
+      }
+    }
+
+    .left-panel-button-back:hover {
+      background: @button_azul_hover;
+    }
+  }
+
+  .right-panel {
+    width: 100%;
+    height: 100%;
+    margin: 60px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .right-panel-avatar {
+      max-width: 130px;
+      display: flex;
+      position: relative;
+
+      img {
+        width: 130px;
+        height: 130px;
+        object-fit: cover;
+        border-radius: 130px;
+      }
+    }
+
+    .right-panel-avatar-hover {
+      display: flex;
+      opacity: 0;
+      justify-content: center;
+      align-items: center;
+      font-size: 13px;
+      width: 130px;
+      height: 130px;
+      border-radius: 130px;
+      position: absolute;
+      text-align: center;
+      background: rgb(0 0 0 / 40%);
+
+      p,
+      span {
+        color: @white_color;
+        white-space: pre;
+
+        span::before {
+          content: "\A";
+        }
+      }
+    }
+
+    .right-panel-avatar-hover:hover {
+      opacity: 1;
+    }
+
+    .right-panel-name {
+      font-family: "Inter Semi", serif;
+      font-size: 16px;
+      color: @text_color;
+      margin: 21px 0 50px;
+    }
+
+    .right-panel-form-element {
+      width: 510px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 10px 0;
+      border-bottom: 1px solid #EAEAEA;
+      padding: 0 0 10px;
+
+      label {
+        font-size: 13px;
+        color: @text_color;
+        width: 100%;
+      }
+
+      input {
+        font-size: 13px;
+        text-align: right;
+        width: 100%;
+      }
+
+      input[readonly] {
+        color: @text_color;
+      }
+
+      .label-alert {
+        color: @error_color;
+      }
+    }
+
+    .right-panel-form-element:last-of-type {
+      border-bottom: 0;
+    }
+
+    .right-panel-action-base {
+      margin: 60px 0 0;
+
+      .right-panel-link {
+        color: @link_color;
+        text-decoration: none;
+      }
+
+      .right-panel-action-red {
+        color: @error_color;
+      }
+
+      .right-panel-action-save {
+        text-align: center;
+
+        .button-as-link {
+          padding: 14px 0 0;
+        }
+      }
+    }
+
+    .right-panel-change-avatar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgb(0 0 0 / 40%);
+
+      .right-panel-change-avatar-modal {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 340px;
+        height: 272px;
+        top: calc(50% - 136px);
+        left: calc(50% - 150px);
+        background: @white_color;
+        border-radius: 12px;
+
+        header {
+          margin: 40px 0 0;
+
+          h2 {
+            font-size: 15px;
+            color: #1E1E1E;
+          }
+
+          .h2-error {
+            color: @error_color;
+          }
+        }
+
+        .button-normal {
+          width: 280px;
+          height: 37px;
+          cursor: pointer;
+          background: @button_azul_color;
+          border-radius: 8px;
+          border: 0;
+          color: @button_azul_text_color;
+        }
+
+        .button-as-link {
+          background: @white_color;
+          cursor: pointer;
+          padding: 14px 0 0;
+          color: @button_azul_color;
+          font-size: 12px;
+          text-decoration: underline;
+        }
+
+        .avatar-modal-body {
+          height: 140px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+
+        footer {
+          height: 55px;
+
+          span {
+            display: block;
+            color: @error_color;
+            font-size: 11px;
+            margin: 14px 0 0;
+            justify-self: center;
+          }
+        }
+      }
+    }
+  }
+}

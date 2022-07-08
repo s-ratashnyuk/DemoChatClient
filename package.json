@@ -1,0 +1,80 @@
+{
+  "name": "yp_module1",
+  "version": "1.0.0",
+  "description": "",
+  "engines": {
+    "node": ">=16.0"
+  },
+  "targets": {
+    "default": {
+      "engines": {
+        "browsers": ">= 50%"
+      }
+    }
+  },
+  "scripts": {
+    "dev": "npm run stylelint && npm run jslint && npm run dev-serve",
+    "dev-serve": "node ./node_modules/.bin/webpack --config webpack.dev.js && npx webpack serve --config webpack.dev.js",
+    "build": "node ./node_modules/.bin/webpack --config webpack.prod.js",
+    "jslint": "tsc --noemit && eslint src --ext ts --ext js",
+    "stylelint": "stylelint \"**/*.less\" --custom-syntax postcss-less",
+    "test": "jest",
+    "start": "npm run build && PORT=3000 node ./app.js",
+    "prepare": "husky install"
+  },
+  "staticFiles": {
+    "staticOutPath": "static"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s-ratashnyuk/YP_Module1.git"
+  },
+  "author": "S. Ratashnyuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/s-ratashnyuk/YP_Module1/issues"
+  },
+  "homepage": "https://github.com/s-ratashnyuk/YP_Module1#readme",
+  "dependencies": {
+    "handlebars": "4.7.7",
+    "node-addon-api": "4.3.0"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "8.13.0",
+    "@testing-library/jest-dom": "5.16.4",
+    "@types/jest": "27.4.1",
+    "@typescript-eslint/eslint-plugin": "5.18.0",
+    "@typescript-eslint/parser": "5.18.0",
+    "autoprefixer": "10.4.7",
+    "css-loader": "6.7.1",
+    "cssnano": "5.1.7",
+    "eslint": "8.13.0",
+    "eslint-config-airbnb-typescript": "17.0.0",
+    "express": "4.17.3",
+    "extract-loader": "5.1.0",
+    "file-loader": "6.2.0",
+    "handlebars": "4.7.7",
+    "html-loader": "3.1.0",
+    "husky": "7.0.4",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "27.0.0",
+    "less": "4.1.2",
+    "less-loader": "10.2.0",
+    "mini-css-extract-plugin": "2.6.0",
+    "msw": "0.39.2",
+    "postcss": "8.4.13",
+    "postcss-less": "6.0.0",
+    "postcss-loader": "6.2.1",
+    "style-loader": "3.3.1",
+    "stylelint": "14.6.1",
+    "stylelint-config-standard": "25.0.0",
+    "ts-jest": "27.1.4",
+    "ts-loader": "9.3.0",
+    "ts-node": "10.7.0",
+    "typescript": "4.6.3",
+    "webpack": "5.72.0",
+    "webpack-cli": "4.9.2",
+    "webpack-dev-server": "4.9.0",
+    "webpack-merge": "5.8.0"
+  }
+}

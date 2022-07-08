@@ -1,0 +1,35 @@
+@import "constants";
+
+.button-azul {
+  width: 280px;
+  height: 37px;
+  background: @button_azul_color;
+  border-radius: 8px;
+  border: 0;
+  color: @button_azul_text_color;
+
+  &:hover {
+    background-color: @button_azul_hover;
+  }
+}
+
+.button-add {
+  height: 22px;
+  width: 22px;
+  margin: 0 0 0 10px;
+  background: url("../../static/icons/plus-sign-gray.svg") no-repeat center;
+
+  &:hover {
+    background: url("../../static/icons/plus-sign-gray-hover.svg") no-repeat center;
+  }
+}
+
+.button-as-link {
+  color: @link_color;
+  text-decoration: none;
+  background-color: @white_color;
+}
+
+.button-as-link-error {
+  color: @error_color;
+}

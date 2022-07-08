@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="{{ page_style }}"/>
+        {{#if page_script}}
+            <script src="{{ page_script }}" type="module"></script>
+        {{/if}}
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <main>
+            {{> PageContent}}
+        </main>
+    </body>
+</html>

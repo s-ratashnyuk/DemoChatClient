@@ -1,0 +1,54 @@
+@import "../../styles/constants";
+
+.login-main-window {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: calc(50% - 235px);
+  right: calc(50% - 170px);
+  width: 340px;
+  height: 470px;
+  border-radius: 12px;
+  box-shadow: 0 0 6px rgb(0 0 0 / 14%);
+
+  .header {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 17px;
+    color: #1E1E1E;
+
+    h1 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 500;
+      color: @input_base_color;
+    }
+  }
+
+  .form {
+    margin: 0 30px;
+
+    span {
+      font-size: 8px;
+      color: @error_color;
+    }
+  }
+
+  .error {
+    margin: 42px 0 0;
+    align-self: center;
+
+    span {
+      color: @error_color;
+    }
+  }
+
+  .buttons {
+    margin: 90px 0 30px;
+    text-align: center;
+
+    .button-as-link {
+      padding: 14px 0 0;
+    }
+  }
+}
